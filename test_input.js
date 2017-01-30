@@ -4,35 +4,31 @@ var testvar = "this is my test var";
 
 var dialog1 = {
 
+    input = "",
     initialize: function (dialog) {
-        var input = dialog.store()["inputtext"];
-        input = "the input";
-        dialog.load({ "inputtext": input});
+        dialog.load({"inpt": this.strName});
     },
     commit: function (dialog) {
         var results = dialog.store();
-        console.println("The inputed text was: " + results["input"])
+        this.strname = results["inpt"];
     },
-    description:
-     {
+    description: {
         name: "The INPUT Box",
         align_children: "align_left",
         width: 350,
         height: 200,
-        elements:
-        [
-             {
+        elements: [
+            {
              type: "cluster",
              name: "The place you put input",
              align_children: "align left",
-             elements:
-             [
+             elements: [
                  {
                  type: "static_text",
                  name: "Input: "
                  },
                  {
-                 item_id: "input",
+                 item_id: "inpt",
                  type: "edit_text",
                  alignment: "align_fill",
                  width: 300,
@@ -51,6 +47,9 @@ var dialog1 = {
 app.execDialog(dialog1);
 console.clear();
 console.show();
+
 console.println(testvar);
+
+console.print1n(results["inpt"]);
 
 /*The answer is NO, the settings of the script must be set out in the inital code which can be made editable by checking the "Prompt User" button*/
