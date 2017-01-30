@@ -1,9 +1,6 @@
 /*This is a test script to see if Adobe will allow user inputs as pop-ups*/
 
 var testvar = "this is my test var";
-console.clear();
-console.show();
-console.println(testvar);
 
 var dialog1 = {
 
@@ -26,7 +23,7 @@ var dialog1 = {
         [
              {
              type: "cluster",
-             name: "The place you put input"
+             name: "The place you put input",
              align_children: "align left",
              elements:
              [
@@ -44,12 +41,16 @@ var dialog1 = {
              ]
              },
              {
-             type: "static_text"
+             type: "static_text",
              name: "some other text you wanted in this cluster"
              },
          ]
-     };
+     }
+};
 
 app.execDialog(dialog1);
+console.clear();
+console.show();
+console.println(testvar);
 
 /*The answer is NO, the settings of the script must be set out in the inital code which can be made editable by checking the "Prompt User" button*/
