@@ -6,11 +6,11 @@ var dialog1 = {
 
     input = "",
     initialize: function (dialog) {
-        dialog.load({"inpt": this.strName});
+        dialog.load({"inpt": this.input});
     },
     commit: function (dialog) {
         var results = dialog.store();
-        this.strname = results["inpt"];
+        this.input = results["inpt"];
     },
     description: {
         name: "The INPUT Box",
