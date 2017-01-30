@@ -5,8 +5,8 @@ USER INPUTS:
 
 */
 
-var
 
 /* END USER INPUT SECTION*/
 
-var tpages = 
+var tpages = 5;
+var annotations = this.getAnnots()
