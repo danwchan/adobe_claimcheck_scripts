@@ -5,6 +5,18 @@ USER INPUTS:*/
 
 /* END USER INPUT SECTION*/
 
+var newdoc = 
+
+/* this is in the Javascript folder of my adobe installation 
+C:\Program Files (x86)\Adobe\Acrobat 10.0\Acrobat\Javascripts*/
+
+//make app.browseForDoc a trusted execution
+findDoc = app.trustedFunction(
+    function() {
+        app.browseForDoc()
+    }
+);
+
 //a function to move annotations from one pdf for another if they are the same size
 function bulkmove(numberOne, numberTwo) {
     return (numberOne) + (numberTwo);
@@ -20,7 +32,17 @@ function small2big(numberOne, numberTwo) {
     return (numberOne) + (numberTwo);
 }
 
-// Dialog Definition 
+//Dialog for
+var chooseNew = { 
+
+//the look
+    description: { name: "Hey, look!", elements: [
+    	{ name: "Please choose the file you want to import the annotations into (the destination)", type: "static_text"},
+    	{ type: "ok", },
+    ] } 
+}; 
+
+// Main user input dialog definition 
 var oDlg = {
 
 //set the variables
@@ -42,7 +64,7 @@ var oDlg = {
         this.input0 = data[ "var0"];
         this.input1 = data[ "var1"];
         console.println("Input recorded");
-        console.println(catter(data["var0"], data["var1"]));
+        console.println((data["var0"] + data["var1"]));
     },
 
 //how the box should look and which areas corresspond to which inputs
@@ -62,4 +84,6 @@ var oDlg = {
 // Dialog Activation 
 console.clear();
 console.show();
+app.execDialog(chooseNew);
+var destination = app.trustedFunction(findDoc());
 app.execDialog(oDlg);
