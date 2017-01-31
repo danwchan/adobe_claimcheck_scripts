@@ -61,4 +61,4 @@ console.show();
 app.execDialog(oDlg);
 console.println(data);
 
-/*The answer is NO, the settings of the script must be set out in the inital code which can be made editable by checking the "Prompt User" button*/
+/*The answer is YES but the inputs are local variables inside the dialog so fucntions must be defined outside and called inside the dialog*/
