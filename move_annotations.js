@@ -5,20 +5,8 @@ USER INPUTS:*/
 
 /* END USER INPUT SECTION*/
 
-var newdoc = 
-
-/* this is in the Javascript folder of my adobe installation 
-C:\Program Files (x86)\Adobe\Acrobat 10.0\Acrobat\Javascripts*/
-
-//make app.browseForDoc a trusted execution
-findDoc = app.trustedFunction(
-    function() {
-        app.browseForDoc()
-    }
-);
-
 //a function to move annotations from one pdf for another if they are the same size
-function bulkmove(numberOne, numberTwo) {
+function bulkmove(currentdoc, newdoc, addedPages, removedPages) {
     return (numberOne) + (numberTwo);
 }
 
@@ -71,9 +59,13 @@ var oDlg = {
     description: {
         name: "Test Dialog", elements: [ {
             type: "view", elements: [
-                { name: "Input:", type: "static_text", },
+                { name: "Destination for the annotations:", type: "static_text", },
                 { item_id: "var0", type: "edit_text", char_width: 15 },
-                { name: "Input2:", type: "static_text", },
+                { name: "Removed pages:", type: "static_text", },
+                { item_id: "var1", type: "edit_text", char_width: 15 },
+                { type: "ok", ok_name: "submit"},
+                { item_id: "var1", type: "edit_text", char_width: 15 },
+                { type: "ok", ok_name: "submit"},
                 { item_id: "var1", type: "edit_text", char_width: 15 },
                 { type: "ok", ok_name: "submit"},
             ]
@@ -85,5 +77,4 @@ var oDlg = {
 console.clear();
 console.show();
 app.execDialog(chooseNew);
-var destination = app.trustedFunction(findDoc());
 app.execDialog(oDlg);
