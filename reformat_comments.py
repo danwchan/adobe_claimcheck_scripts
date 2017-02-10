@@ -1,9 +1,10 @@
 import re
 
-
+#go through the file and split out the annotation data
 def splitter(file):
     comments = file.readlines()
 
+#take the extracted annotation information and rebuild the fdf
 def builder(lookup_list):
     
     
