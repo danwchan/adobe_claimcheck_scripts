@@ -66,8 +66,8 @@ AKEHKJD PI 2016 p3, Black Box Warning, SERIOUS INFECTIONS, ¶1, l1-4
 AKEHKJD PI 2016 pg 3, Black Box Warning, SERIOUS INFECTIONS, ¶ 1, ln1-4
 AKEHKJD PI 2006 pg3, Black Box Warning, SERIOUS INFECTIONS, ¶1, lines 1-11
 LLLLJAJ PI 2006 pg10, ¶5, l5-7; p11, ¶1 l1-2
-LLLLJAJ PI 206 pg10, para5, l5-7; p11, para1 lines1-2
-LLLLJAJ PI 2016 p10, para 5, l5-7; p11, para1 l1-2
+LLpLJAJ PI 206 pg10, para5, l5-7; p11, para1 lines1-2
+LpvbJAJ PI 2016 p10, para 5, l5-7; p11, para1 l1-2
 LLLLJAJ PI 2016 p10, ¶ 5, l5-7; p11, ¶1 l1-2
 Daivk 2013 , Page 1, Col 1, Methods
 Furman 2014, Page 4, Table 1
@@ -78,3 +78,12 @@ Burmester 2013 p517, §2, ¶4, l1-7; p518, §1, ¶5, l1-2;
 AKEHKJD PI 2016 p3, Black Box Warning, SERIOUS INFECTIONS, ¶1, l1-4
 QQdsfter 2003, pg 107, §1, ¶3, l1-6
 fsdfnt 2007, p114, Table IV
+Cavid PI 2016, §2.3, ¶2, ln1-2; §16.1, ¶1, ln1-3
+van der Linden 2002, pg530, col1, ¶2, ln1-4; pg532, col1, ¶3, ln3-11; col2, ¶1, ln1-6
+Fanikos 2007, pg2039, col2, ¶3, ln1-15; col3, ¶1, ln1-16; ¶3, ln5-20
+ASHP Guidelines 2013, pg485, col1, ¶3, ln6-13; ¶5, ln1-8
+Joint Commission 2015, pgMM-18, §MM.05.01.11 C4
+ISMP 2016, pg8, §Compounding, bullet 1
+Fabio 1997, pg98, col1, ¶5, ln5-7; col2, ¶3, ln1-3; pg99, col2, ¶2, ln1-6
+Cavid PI 2016, §14, ¶1, ln1-12
+Generic PI 2006, pg2, §Dosage and Administration-Preparation, ¶5, ln1-2
