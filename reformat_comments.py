@@ -29,6 +29,9 @@ pages = [lookup_page.findall(lines.strip()) for lines in annotations]
 columns = [lookup_col.findall(lines.strip()) for lines in annotations]
 sections = [lookup_section.findall(lines.strip()) for lines in annotations]
 
+lookup_section = re.compile(r".*?[, ]?(?:§|[sS][eE][cC][tTiIoOnN]{0,3})[ ]?(\d{1,3}[.]?\d{0,3})|([a-zA-Z]+)[\n,]") #works
+lookup_section = re.compile(r".*?[, ]?(?:§)|(?:[sS][eE][cC][tTiIoOnN]{0,3})[ ]?(\d{1,3}[.]?\d{0,3})|([a-zA-Z\s]+)[\n,]")  #doesn't
+
 #a little test for the properties of .match
 if authors[2]== None:
 	print("it's nothing")
