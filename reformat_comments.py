@@ -13,16 +13,17 @@ counter = 0
 
 '''
 Regular expression help comments:
-^([\w\s]*?(?=(\d{4})[ ,])) <- looking for the author and year only if it is followed by the year
-([pP][aA]?[gG]?[eE]?[ ]?)(\w{1,5})[, ].*?\1(\w{1,5})[, ].*?<- looking for the page
+^([\w\s']*?(?=(\d{4})[ ,]))                         <- looking for the author [\w\s'] and year [\d{4}] only if it is followed by the year
+(?:.*?[pP][aA]?[gG]?[eE]?[ ]?)([vVsSi\d]{1,6})[, ]  <- looking for the page [pP][aA]?[gG]?[eE]?[ ]? and the page number [vVsSi\d]{1,6}
 '''
-lookup_authoryear = re.compile(r"^([\w\s]*?(?=(\d{4})[ ,]))") 
-lookup_page = re.compile(r"(?:.*?[pP][aA]?[gG]?[eE]?[ ]?)([vVsSi\d]{1,6})[, ]") #hitting th problem that I can't capure the repeated page number
+lookup_authoryear = re.compile(r"^([\w\s]*?(?=(\d{4})[ ,]))")  #looking for the author and year
+lookup_page = re.compile(r"(?:.*?[pP][aA]?[gG]?[eE]?[ ]?)([vVsSi\d]{1,6})[, ]") #looking for the page return the number in a list
+lookup_col =
+lookup_section =
+lookup_lines =
 
-authors = [lookup_author.findall(lines.strip()) for lines in annotations]
-
-annotations = [lookup_author.sub("author", lines.strip()) for lines in annotations] #remove the author to ease regex confusion
-
+authors = [lookup_authoryear.findall(lines.strip()) for lines in annotations]
+annotations = [lookup_authoryear.sub("author", lines.strip()) for lines in annotations] #remove the author to ease regex confusion
 pages = [lookup_page.findall(lines.strip()) for lines in annotations]
 
 #a little test for the properties of .match
@@ -34,7 +35,7 @@ else:
 #another littles test for the properties of .match
 counter = 0
 for lines in pages:
-    if lines != None:
+    if lines != []:
         lines.groups()
         counter = counter + 1
     else:
@@ -43,7 +44,7 @@ for lines in pages:
 
 #another littles test for the properties of .match
 for lines in pages:
-    if lines != None:
+    if lines != []:
         print(lines)
         counter = counter + 1
     else:
